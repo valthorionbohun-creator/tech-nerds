@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Nerds | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell admin-shell">
+      <header class="topbar">
+        <div class="brand-group">
+          <span class="brand-mark">✦</span>
+          <span class="brand-name">TECH NERDS</span>
+        </div>
+        <nav class="nav-main" aria-label="Menu principal">
+          <a href="index.html">Início</a>
+          <a href="article.html">Matéria</a>
+          <a href="admin.html" class="active">Admin</a>
+        </nav>
+        <div class="header-tools">
+          <a href="login.html" class="account-button">VN</a>
+        </div>
+      </header>
+
+      <main class="admin-layout">
+        <section class="admin-panel panel-card">
+          <div class="widget-head admin-head">
+            <h2>Painel editorial</h2>
+            <button class="primary-button small">Publicar agora</button>
+          </div>
+
+          <form id="composerForm" class="composer-form">
+            <label>
+              <span>Título</span>
+              <input type="text" id="composerTitle" placeholder="Digite o título da matéria" required />
+            </label>
+            <label>
+              <span>Categoria</span>
+              <select id="composerCategory">
+                <option value="tech">Tecnologia</option>
+                <option value="games">Games</option>
+                <option value="anime">Anime</option>
+                <option value="rpg">RPG / TCG</option>
+              </select>
+            </label>
+            <label>
+              <span>Resumo</span>
+              <textarea id="composerSummary" rows="4" placeholder="Resumo da publicação" required></textarea>
+            </label>
+            <button type="submit" class="primary-button">Salvar rascunho</button>
+          </form>
+        </section>
+
+        <section class="stats-grid">
+          <div class="stats-card panel-card">
+            <span class="section-kicker">Leituras</span>
+            <h3>42.8k</h3>
+            <small>+18% na última semana</small>
+          </div>
+          <div class="stats-card panel-card">
+            <span class="section-kicker">Engajamento</span>
+            <h3>8.9%</h3>
+            <small>+2.3% no feed</small>
+          </div>
+          <div class="stats-card panel-card">
+            <span class="section-kicker">Novos usuários</span>
+            <h3>1.8k</h3>
+            <small>+640 hoje</small>
+          </div>
+        </section>
+
+        <section class="queue-block panel-card">
+          <div class="widget-head">
+            <h3>Fila de publicação</h3>
+            <a href="#">Ver todas</a>
+          </div>
+          <ul class="queue-list" id="queueList">
+            <li><span>Tech</span><strong>IA e privacidade em foco</strong><small>Agenda 18:00</small></li>
+            <li><span>Games</span><strong>MMORPG de 2026 ganha destaque</strong><small>Agenda 20:00</small></li>
+            <li><span>Anime</span><strong>Novos títulos que explodiram no fandom</strong><small>Agenda 22:00</small></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
