@@ -1,49 +1,319 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tech Nerds — notícias, análises e comunidade geek." />
-  <title>Tech Nerds — O seu universo geek</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Tech Nerds início"><span>✦</span> TECH NERDS</a>
-    <nav class="topnav" aria-label="Navegação principal">
-      <a class="active" href="#inicio">Início</a><a href="#explorar">Explorar</a><a href="#stories">Stories</a><a href="#salvos">Salvos</a>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-btn" id="searchToggle" aria-label="Pesquisar">⌕</button>
-      <button class="icon-btn" aria-label="Notificações">♧<i></i></button>
-      <button class="avatar" aria-label="Abrir perfil">VN</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tech Nerds — portal de notícias geek, games, anime, tecnologia e cultura pop." />
+    <title>Tech Nerds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="masthead">
+        <div class="brand-wrap">
+          <span class="brand-mark">✦</span>
+          <span class="brand-word">TECH NERDS</span>
+        </div>
+
+        <nav class="main-menu" aria-label="Menu principal">
+          <a class="active" href="#inicio">Inicio</a>
+          <a href="#noticias">Notícias</a>
+          <a href="#stories">Stories</a>
+          <a href="#comunidade">Comunidade</a>
+          <a href="#perfil">Perfil</a>
+        </nav>
+
+        <div class="header-tools">
+          <button class="icon-button search-toggle" aria-label="Abrir busca">⌕</button>
+          <button class="icon-button" aria-label="Notificações">◔</button>
+          <button class="icon-button chat-button" aria-label="Chat">✦</button>
+          <button class="account-button" aria-label="Conta do usuário">VN</button>
+        </div>
+      </header>
+
+      <div class="search-box" id="searchBox">
+        <input type="search" id="searchInput" placeholder="Buscar notícias, games, anime, tecnologia..." />
+      </div>
+
+      <main class="content-grid" id="inicio">
+        <aside class="left-rail">
+          <section class="profile-panel">
+            <div class="avatar-large">VN</div>
+            <div>
+              <strong>Vitor N.</strong>
+              <span>@vitornerd</span>
+            </div>
+            <button class="ghost-button">Meu perfil</button>
+          </section>
+
+          <nav class="nav-panel" aria-label="Menu lateral">
+            <a href="#inicio" class="nav-item active">⌂ Início</a>
+            <a href="#noticias" class="nav-item">◌ Notícias</a>
+            <a href="#stories" class="nav-item">◍ Stories</a>
+            <a href="#comunidade" class="nav-item">✦ Comunidade</a>
+            <a href="#salvos" class="nav-item">▣ Salvos</a>
+          </nav>
+
+          <div class="side-section">
+            <p class="section-label">Categorias</p>
+            <div class="category-list">
+              <button class="category-item" data-filter="tech"><span class="color-dot tech"></span> Tecnologia</button>
+              <button class="category-item" data-filter="games"><span class="color-dot games"></span> Games</button>
+              <button class="category-item" data-filter="anime"><span class="color-dot anime"></span> Anime</button>
+              <button class="category-item" data-filter="rpg"><span class="color-dot rpg"></span> RPG / TCG</button>
+            </div>
+          </div>
+
+          <div class="community-box">
+            <span class="mini-icon">✦</span>
+            <h4>Comunidade nerd ativa</h4>
+            <p>Compartilhe teorias, memes e lançamentos do seu universo favorito.</p>
+            <button class="primary-button small">Entrar</button>
+          </div>
+        </aside>
+
+        <section class="center-column" id="noticias">
+          <div class="stories-strip" id="stories">
+            <div class="story story-add">
+              <div class="story-avatar">＋</div>
+              <span>Seu story</span>
+            </div>
+            <div class="story">
+              <div class="story-avatar gradient-a">N</div>
+              <span>Nerds</span>
+            </div>
+            <div class="story">
+              <div class="story-avatar gradient-b">G</div>
+              <span>Game On</span>
+            </div>
+            <div class="story">
+              <div class="story-avatar gradient-c">A</div>
+              <span>Animes</span>
+            </div>
+            <div class="story">
+              <div class="story-avatar gradient-d">M</div>
+              <span>Mangás</span>
+            </div>
+            <div class="story">
+              <div class="story-avatar gradient-e">R</div>
+              <span>RPG</span>
+            </div>
+          </div>
+
+          <article class="feature-hero">
+            <div class="hero-copy">
+              <p class="kicker">Atualização diária · 25 set 2026</p>
+              <h1>O futuro do entretenimento nerd é mais vivo do que nunca.</h1>
+              <p class="lead">Tecnologia, cultura pop, games e histórias que se cruzam entre mundos reais e imaginários.</p>
+              <div class="hero-actions">
+                <button class="primary-button">Ler matéria</button>
+                <button class="ghost-button dark">Seguir canal</button>
+              </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="ring ring-one"></div>
+              <div class="ring ring-two"></div>
+              <div class="hex">✦</div>
+            </div>
+          </article>
+
+          <div class="feed-head">
+            <div>
+              <p class="section-label">Feed editorial</p>
+              <h2>O que está acontecendo hoje</h2>
+            </div>
+            <div class="filters">
+              <button class="filter-button active" data-filter="all">Tudo</button>
+              <button class="filter-button" data-filter="tech">Tecnologia</button>
+              <button class="filter-button" data-filter="games">Games</button>
+              <button class="filter-button" data-filter="anime">Anime</button>
+            </div>
+          </div>
+
+          <article class="news-card" data-category="games">
+            <div class="news-meta">
+              <span class="tag tag-games">Games</span>
+              <span class="time">há 32 min</span>
+            </div>
+            <div class="news-layout">
+              <div class="news-text">
+                <h3>O MMORPG do ano promete transformar a rotina em uma aventura infinita.</h3>
+                <p>Com pisos de mundo dinâmicos, quests que mudam conforme suas escolhas e sistemas de guilda em tempo real, o jogo está sendo comparado aos maiores clássicos do gênero.</p>
+              </div>
+              <div class="thumbnail thumb-one" aria-hidden="true">
+                <span>LIVE</span>
+              </div>
+            </div>
+            <div class="news-footer">
+              <div class="author-box">
+                <div class="mini-avatar purple">MN</div>
+                <div>
+                  <strong>Marina Nogueira</strong>
+                  <small>8 min de leitura</small>
+                </div>
+              </div>
+              <div class="emoji-actions">
+                <button class="action-button like-button" aria-label="Curtir">♡ <span>248</span></button>
+                <button class="action-button" aria-label="Comentar">◌ <span>32</span></button>
+                <button class="action-button share-button" aria-label="Compartilhar">↗</button>
+                <button class="action-button save-button" aria-label="Salvar">▣</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card" data-category="tech">
+            <div class="news-meta">
+              <span class="tag tag-tech">Tecnologia</span>
+              <span class="time">há 1h</span>
+            </div>
+            <div class="news-layout">
+              <div class="news-text">
+                <h3>IA e privacidade: as plataformas que querem te conhecer em tempo real.</h3>
+                <p>Desde ferramentas de criação até assistentes da produtividade, a era da hyperpersonalização está redefinindo a relação entre usuário, dados e inteligência artificial.</p>
+              </div>
+              <div class="thumbnail thumb-two" aria-hidden="true"><span>AI</span></div>
+            </div>
+            <div class="news-footer">
+              <div class="author-box">
+                <div class="mini-avatar beige">TL</div>
+                <div>
+                  <strong>Tech Lab</strong>
+                  <small>6 min de leitura</small>
+                </div>
+              </div>
+              <div class="emoji-actions">
+                <button class="action-button like-button" aria-label="Curtir">♡ <span>189</span></button>
+                <button class="action-button" aria-label="Comentar">◌ <span>18</span></button>
+                <button class="action-button share-button" aria-label="Compartilhar">↗</button>
+                <button class="action-button save-button" aria-label="Salvar">▣</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card" data-category="anime">
+            <div class="news-meta">
+              <span class="tag tag-anime">Anime</span>
+              <span class="time">há 2h</span>
+            </div>
+            <div class="news-layout">
+              <div class="news-text">
+                <h3>As melhores histórias de anime continuam sendo aquelas que mexem com a mente.</h3>
+                <p>Entre estética, drama e filosofia, a nova leva de títulos revela que a cultura pop mais adulta está sendo construída com raciocínio, emoção e referências profundas.</p>
+              </div>
+              <div class="thumbnail thumb-three" aria-hidden="true"><span>OVA</span></div>
+            </div>
+            <div class="news-footer">
+              <div class="author-box">
+                <div class="mini-avatar rose">AY</div>
+                <div>
+                  <strong>Akira Yamato</strong>
+                  <small>5 min de leitura</small>
+                </div>
+              </div>
+              <div class="emoji-actions">
+                <button class="action-button like-button" aria-label="Curtir">♡ <span>427</span></button>
+                <button class="action-button" aria-label="Comentar">◌ <span>54</span></button>
+                <button class="action-button share-button" aria-label="Compartilhar">↗</button>
+                <button class="action-button save-button" aria-label="Salvar">▣</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card" data-category="rpg">
+            <div class="news-meta">
+              <span class="tag tag-rpg">RPG / TCG</span>
+              <span class="time">há 3h</span>
+            </div>
+            <div class="news-layout">
+              <div class="news-text">
+                <h3>Cartas, fichas e narrativas: o TCG está voltando a ser o centro da conversa geek.</h3>
+                <p>As coleções premium, estratégias de mesa e competições digitais estão devolvendo prestigio ao formato, que se reinventa para públicos de todas as idades.</p>
+              </div>
+              <div class="thumbnail thumb-four" aria-hidden="true"><span>TCG</span></div>
+            </div>
+            <div class="news-footer">
+              <div class="author-box">
+                <div class="mini-avatar violet">JR</div>
+                <div>
+                  <strong>Jeferson R.</strong>
+                  <small>4 min de leitura</small>
+                </div>
+              </div>
+              <div class="emoji-actions">
+                <button class="action-button like-button" aria-label="Curtir">♡ <span>301</span></button>
+                <button class="action-button" aria-label="Comentar">◌ <span>42</span></button>
+                <button class="action-button share-button" aria-label="Compartilhar">↗</button>
+                <button class="action-button save-button" aria-label="Salvar">▣</button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <aside class="right-rail">
+          <section class="widget-panel">
+            <div class="widget-header">
+              <h3>Trending</h3>
+              <a href="#">Ver tudo</a>
+            </div>
+            <div class="trend-list">
+              <div class="trend-item">
+                <span>01 · Tecnologia</span>
+                <strong>O que é computação quântica?</strong>
+                <small>12,4 mil leituras</small>
+              </div>
+              <div class="trend-item">
+                <span>02 · Games</span>
+                <strong>O retorno dos RPGs clássicos</strong>
+                <small>8,7 mil leituras</small>
+              </div>
+              <div class="trend-item">
+                <span>03 · Geek</span>
+                <strong>Cosplay: muito além da fantasia</strong>
+                <small>5,2 mil leituras</small>
+              </div>
+            </div>
+          </section>
+
+          <section class="widget-panel chat-panel" id="comunidade">
+            <div class="widget-header">
+              <h3>Chat nerd</h3>
+              <span class="online-dot">●</span>
+            </div>
+            <div class="chat-message">
+              <strong>Rafa:</strong>
+              <p>Quem já viu o trailer do novo MMORPG? Parece incrível.</p>
+            </div>
+            <div class="chat-message">
+              <strong>Mika:</strong>
+              <p>Eu tô esperando a temporada do anime até a meia-noite.</p>
+            </div>
+            <div class="chat-message">
+              <strong>Leo:</strong>
+              <p>A IA dessa semana está me deixando em dúvida sobre o futuro.</p>
+            </div>
+            <div class="chat-input-box">
+              <input type="text" placeholder="Escreva no chat..." />
+              <button>Enviar</button>
+            </div>
+          </section>
+
+          <section class="widget-panel newsletter-box">
+            <p class="section-label purple">Newsletter</p>
+            <h3>Receba o melhor do universo nerd.</h3>
+            <p>Uma dose diária com o que importa, sem ruído.</p>
+            <input type="email" placeholder="seu@email.com" />
+            <button class="primary-button full">Assinar</button>
+          </section>
+        </aside>
+      </main>
     </div>
-  </header>
-  <div class="searchbar" id="searchbar"><input id="searchInput" type="search" placeholder="Buscar notícias, jogos, animes..." /><span>⌕</span></div>
 
-  <main class="layout" id="inicio">
-    <aside class="sidebar left-sidebar">
-      <p class="eyebrow">Navegue</p>
-      <a class="side-link selected" href="#inicio"><span>⌂</span> Início</a><a class="side-link" href="#explorar"><span>◉</span> Explorar</a><a class="side-link" href="#stories"><span>◌</span> Stories <b class="new-pill">4</b></a><a class="side-link" href="#salvos"><span>▱</span> Salvos</a>
-      <p class="eyebrow space-top">Categorias</p>
-      <a class="side-link" href="#tech"><span class="dot tech"></span> Tecnologia</a><a class="side-link" href="#games"><span class="dot games"></span> Games & MMORPG</a><a class="side-link" href="#anime"><span class="dot anime"></span> Anime & Mangá</a><a class="side-link" href="#tcg"><span class="dot tcg"></span> TCG & RPG</a>
-      <div class="community-card"><span class="spark">✺</span><strong>Entre para a comunidade</strong><p>Converse, compartilhe e descubra seu próximo universo.</p><button class="primary small">Criar conta</button></div>
-    </aside>
+    <div class="toast" id="toast">Compartilhado com sucesso.</div>
 
-    <section class="feed" id="explorar">
-      <section class="hero-card"><div><p class="eyebrow violet">EM DESTAQUE · 25 SET 2026</p><h1>O futuro é mais<br /><em>nerd</em> do que nunca.</h1><p class="hero-copy">Notícias, análises e histórias para quem vive entre pixels, páginas e mundos fantásticos.</p><button class="primary" onclick="document.querySelector('#featured').scrollIntoView({behavior:'smooth'})">Ler destaque <span>↗</span></button></div><div class="hero-orbit"><div class="orbit o1"></div><div class="orbit o2"></div><div class="cube">✦</div><small>IDEIAS QUE<br />CONECTAM</small></div></section>
-      <div class="section-heading" id="featured"><div><p class="eyebrow">SEU FEED · ATUALIZADO HOJE</p><h2>O que está acontecendo</h2></div><div class="filter-pills"><button class="filter active">Tudo</button><button class="filter">Tecnologia</button><button class="filter">Games</button><button class="filter">Anime</button></div></div>
-      <article class="post" data-category="games"><div class="post-meta"><span class="topic games-text">GAMES & MMORPG</span><span>há 32 min</span></div><h3>O próximo grande mundo aberto quer fazer você esquecer da vida real</h3><p class="post-excerpt">Desenvolvedores revelam detalhes do novo RPG que promete um mapa vivo, escolhas que importam e uma trilha sonora inesquecível.</p><div class="post-footer"><div class="author"><div class="mini-avatar purple">MN</div><span>Marina Nogueira <small>· 8 min de leitura</small></span></div><div class="post-actions"><button class="action like">♡ <span>248</span></button><button class="action comment">◌ <span>32</span></button><button class="action share">↗</button><button class="action save">▱</button></div></div></article>
-      <article class="post" data-category="tech"><div class="post-meta"><span class="topic tech-text">TECNOLOGIA</span><span>há 1 h</span></div><h3>A internet está mudando — e a gente ainda está tentando acompanhar</h3><p class="post-excerpt">IA, privacidade e a nova era dos dispositivos pessoais: um guia para entender as tendências que já estão batendo à nossa porta.</p><div class="post-footer"><div class="author"><div class="mini-avatar beige">TL</div><span>Tech Labs <small>· 6 min de leitura</small></span></div><div class="post-actions"><button class="action like">♡ <span>189</span></button><button class="action comment">◌ <span>18</span></button><button class="action share">↗</button><button class="action save">▱</button></div></div></article>
-      <article class="post" data-category="anime"><div class="post-meta"><span class="topic anime-text">ANIME & MANGÁ</span><span>há 2 h</span></div><h3>Por que as melhores histórias ainda começam em uma página em branco</h3><p class="post-excerpt">Uma conversa sobre arte, memória e a geração de autores que está reinventando o mangá fora do Japão.</p><div class="post-footer"><div class="author"><div class="mini-avatar orange">AY</div><span>Akira Yamato <small>· 5 min de leitura</small></span></div><div class="post-actions"><button class="action like">♡ <span>427</span></button><button class="action comment">◌ <span>51</span></button><button class="action share">↗</button><button class="action save">▱</button></div></div></article>
-    </section>
-
-    <aside class="sidebar right-sidebar"><section id="stories"><div class="aside-title"><h2>Stories</h2><a href="#stories">Ver todos</a></div><div class="story-list"><div class="story add-story"><div class="story-avatar">+</div><span>Seu story</span></div><div class="story"><div class="story-avatar gradient">N</div><span>Nerd News</span></div><div class="story"><div class="story-avatar blue">G</div><span>Game On</span></div><div class="story"><div class="story-avatar pink">A</div><span>Anime-se</span></div></div></section><section class="trending"><div class="aside-title"><h2>Em alta agora</h2><a href="#explorar">Ver mais</a></div><div class="trend"><small>01 · TECNOLOGIA</small><strong>O que é computação quântica?</strong><span>12,4 mil leituras</span></div><div class="trend"><small>02 · GAMES</small><strong>O retorno triunfal dos RPGs clássicos</strong><span>8,7 mil leituras</span></div><div class="trend"><small>03 · CULTURA GEEK</small><strong>Cosplay: muito além da fantasia</strong><span>5,2 mil leituras</span></div></section><section class="newsletter"><p class="eyebrow violet">NEWSLETTER</p><h3>Receba o melhor do universo nerd.</h3><p>Uma dose diária, sem spam.</p><input type="email" placeholder="seu@email.com" /><button class="primary full">Quero receber <span>↗</span></button></section></aside>
-  </main>
-  <footer><span>✦ TECH NERDS</span><span>Feito para quem nunca para de descobrir.</span><span>© 2026 Tech Nerds</span></footer>
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
+
